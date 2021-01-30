@@ -1,0 +1,29 @@
+
+SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+SET time_zone = "+00:00";
+
+CREATE DATABASE IF NOT EXISTS `locadora` DEFAULT CHARACTER SET latin1 COLLATE latin1_swedish_ci;
+USE `locadora`;
+
+CREATE TABLE IF NOT EXISTS `cliente` (
+  `idCliente` int(11) NOT NULL AUTO_INCREMENT,
+  `nome` varchar(30) DEFAULT NULL,
+  `email` varchar(200) DEFAULT NULL,
+  `idade` int(10) DEFAULT NULL,
+  `estadocivil` varchar(30) DEFAULT NULL,
+  PRIMARY KEY (`idCliente`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
+
+
+CREATE TABLE IF NOT EXISTS `filme` (
+  `idFilme` int(11) NOT NULL AUTO_INCREMENT,
+  `titulo` varchar(50) NOT NULL,
+  `sinopse` varchar(500) NOT NULL,
+  `categoria` varchar(20) NOT NULL,
+  `tempo` int(11) NOT NULL,
+  `dublado` tinyint(4) NOT NULL,
+  `imagem3d` tinyint(4) NOT NULL,
+  PRIMARY KEY (`idFilme`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
+
+
